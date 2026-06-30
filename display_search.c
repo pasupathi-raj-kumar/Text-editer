@@ -121,21 +121,12 @@ void replaceText(TextEditor *editor,
             int index =
                 position - current->line;
 
-            /* Copy first part */
-            strncpy(buffer,
-                    current->line,
-                    index);
+            /* Safely format into buffer without overflowing MAX_LINE_LENGTH */
+            snprintf(buffer, MAX_LINE_LENGTH, "%.*s%s%s", 
+                     index, current->line, newWord, position + strlen(oldWord));
 
-            buffer[index] = '\0';
-
-            /* Add new word */
-            strcat(buffer, newWord);
-
-            /* Add remaining part */
-            strcat(buffer,
-                   position + strlen(oldWord));
-
-            strcpy(current->line, buffer);
+            strncpy(current->line, buffer, MAX_LINE_LENGTH - 1);
+            current->line[MAX_LINE_LENGTH - 1] = '\0';
 
             replaced++;
         }

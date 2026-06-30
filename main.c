@@ -85,7 +85,7 @@ int main() {
             if (delChoice == 'l' || delChoice == 'L')
             {
                 printf("Enter the line number you want to delete: ");
-                int lineNum;
+                int lineNum = -1;
                 scanf("%d", &lineNum);
             
                 deleteLine(&editor, lineNum);
@@ -95,7 +95,7 @@ int main() {
             else if (delChoice == 'c' || delChoice == 'C')
             {
                 printf("Enter number of characters to delete: ");
-               int n;
+               int n = -1;
                 scanf("%d", &n);
                 if(deleteCharacters(&editor, n))
                 {
@@ -135,7 +135,7 @@ int main() {
                 printf("7. start_line\n");
                 printf("8. end_line\n");
                 printf("\nEnter the option :  ");
-                int option;
+                int option = -1;
                 scanf("%d", &option);
                 if (option == 1) {
                     moveCursorUp(&editor);

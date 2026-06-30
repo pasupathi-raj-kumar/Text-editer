@@ -93,5 +93,9 @@ void closeFile(TextEditor *editor)
     editor->cursorLine = 0;
     editor->cursorPos = 0;
 
+    /* Clear undo/redo stacks */
+    editor->undoStack.size = 0;
+    editor->redoStack.size = 0;
+
     printf("Editor cleared successfully.\n");
 }

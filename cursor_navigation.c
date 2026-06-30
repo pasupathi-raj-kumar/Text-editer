@@ -173,7 +173,14 @@ void jumpToEndOfFile(TextEditor *editor)
     }
 
     editor->cursor = editor->tail;
-    editor->cursorLine = 1;
+    
+    int count = 0;
+    Node *curr = editor->head;
+    while(curr != NULL) {
+        count++;
+        curr = curr->next;
+    }
+    editor->cursorLine = count;
 
     int lineLength =
         strlen(editor->cursor->line);
