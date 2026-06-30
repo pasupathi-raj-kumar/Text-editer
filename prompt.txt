@@ -5,20 +5,26 @@ The student has submitted C code for a Text Editor tool that implements a doubly
 Evaluate the provided code against the functional requirements below, strictly following the Tier-Based Scoring Logic.
 
 **Detailed Functional Requirements:**
-1. Text Operations: Inserting text at the cursor, inserting new lines, deleting characters, and deleting whole lines without memory leaks or buffer overflows.
-2. Cursor Navigation: Successfully moving the cursor up, down, left, right, to the start/end of the current line, and to the start/end of the file.
-3. Undo/Redo System: Implementing dynamic array-based stacks to accurately track operations and reverse/re-apply them (insert, delete, newline).
-4. File I/O: Loading existing text files into the linked list structure and saving the current state of the editor back to a file.
-5. Command Parsing: A robust command-loop that safely parses input commands, avoiding buffer overflows and segmentation faults on long inputs.
+- **Basic Functionality:**
+  1. Data Structure: Implementing a doubly-linked list to store lines of text.
+  2. Basic Text Ops: Inserting text at the cursor and creating new lines.
+  3. Command Parsing: A basic command loop that accepts inputs without immediately crashing.
+- **Moderate Functionality:**
+  4. Advanced Text Ops: Accurately deleting characters and whole lines.
+  5. Cursor Navigation: Safely moving the cursor up, down, left, right, and jumping to boundaries (start/end of line or file).
+  6. File I/O: Loading existing text files into the list and saving the editor's state to disk.
+- **Full Functionality:**
+  7. Undo/Redo System: Implementing dynamic array-based stacks to accurately track and reverse/re-apply operations.
+  8. Robustness & Memory Safety: Completely safe from memory leaks, buffer overflows on long string inputs, and segmentation faults.
 
 **Grading Rubric and Mark Allocation (CRITICAL):**
 You must evaluate the project and assign a numerical `score` exactly based on the following tiers (20% intervals):
-- Score: 100 (Tier 1) -> Code compiles cleanly. All functional requirements work flawlessly, including edge cases and memory safety.
-- Score: 80 (Tier 2) -> Code compiles and core features work, but there are minor bugs (e.g., minor UI glitches, occasional undo/redo mismatches, or small memory leaks).
-- Score: 60 (Tier 3) -> Code compiles and basic text insertion/deletion works, but advanced features like undo/redo or file saving are broken or completely missing.
-- Score: 40 (Tier 4) -> Code compiles but suffers from frequent critical failures, such as segmentation faults on basic navigations or operations.
-- Score: 20 (Tier 5) -> Code compiles but crashes almost immediately upon starting, or fails to implement the required core data structures (like the doubly-linked list).
-- Score: 0 (Tier 6) -> Code fails to compile at all.
+- Score: 100 (Full Functionality Met) -> All Basic, Moderate, and Full functionalities work flawlessly (including robust Undo/Redo and memory safety).
+- Score: 80 (Almost Full Functionality) -> All features work, but there are minor bugs (e.g., occasional undo/redo state mismatches or small memory leaks).
+- Score: 60 (Moderate Functionality Met) -> Basic and Moderate functionalities work well (text ops, navigation, file I/O), but Full functionalities (Undo/Redo) are broken or missing.
+- Score: 40 (Basic Functionality Met) -> Only Basic functionalities work. Moderate features (like deletion, navigation, or file saving) cause critical failures like segmentation faults.
+- Score: 20 (Below Basic) -> Code compiles but crashes almost immediately, or fails to implement even the Basic doubly-linked list correctly.
+- Score: 0 (No Functionality) -> Code fails to compile at all.
 
 **Output Constraints (CRITICAL):**
 You must return your evaluation STRICTLY in the following JSON format required by the workflow. Do not include any markdown formatting (e.g., no ```json), extra text, or explanations outside of the JSON block. Return ONLY the raw JSON object.
