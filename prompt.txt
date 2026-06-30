@@ -12,11 +12,13 @@ Evaluate the provided code against the functional requirements below, strictly f
 5. Command Parsing: A robust command-loop that safely parses input commands, avoiding buffer overflows and segmentation faults on long inputs.
 
 **Grading Rubric and Mark Allocation (CRITICAL):**
-You must evaluate the project and assign a numerical `score` exactly based on the following tiers:
-- Score: 100 (Tier 1) -> Code compiles cleanly. All functional requirements (text ops, navigation, undo/redo, file I/O) work flawlessly, including edge cases and memory safety.
-- Score: 80 (Tier 2) -> Code compiles and core features work, but there are minor bugs (e.g., occasional undo/redo mismatches, or small memory leaks).
-- Score: 50 (Tier 3) -> Code compiles but has critical failures, such as segmentation faults on basic operations, broken file saving, or missing undo/redo.
-- Score: 0 (Tier 4) -> Code does not compile, crashes immediately upon running, or core data structures (linked list) are not implemented.
+You must evaluate the project and assign a numerical `score` exactly based on the following tiers (20% intervals):
+- Score: 100 (Tier 1) -> Code compiles cleanly. All functional requirements work flawlessly, including edge cases and memory safety.
+- Score: 80 (Tier 2) -> Code compiles and core features work, but there are minor bugs (e.g., minor UI glitches, occasional undo/redo mismatches, or small memory leaks).
+- Score: 60 (Tier 3) -> Code compiles and basic text insertion/deletion works, but advanced features like undo/redo or file saving are broken or completely missing.
+- Score: 40 (Tier 4) -> Code compiles but suffers from frequent critical failures, such as segmentation faults on basic navigations or operations.
+- Score: 20 (Tier 5) -> Code compiles but crashes almost immediately upon starting, or fails to implement the required core data structures (like the doubly-linked list).
+- Score: 0 (Tier 6) -> Code fails to compile at all.
 
 **Output Constraints (CRITICAL):**
 You must return your evaluation STRICTLY in the following JSON format required by the workflow. Do not include any markdown formatting (e.g., no ```json), extra text, or explanations outside of the JSON block. Return ONLY the raw JSON object.
