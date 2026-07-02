@@ -18,13 +18,18 @@ Evaluate the provided code against the functional requirements below, strictly f
   8. Robustness & Memory Safety: Completely safe from memory leaks, buffer overflows on long string inputs, and segmentation faults.
 
 **Grading Rubric and Mark Allocation (CRITICAL):**
-You must evaluate the project and assign a numerical `score` exactly based on the following tiers (2 point intervals out of 10):
-- Score: 10 (Full Functionality Met) -> All Basic, Moderate, and Full functionalities work flawlessly (including robust Undo/Redo and memory safety).
-- Score: 8 (Almost Full Functionality) -> All features work, but there are minor bugs (e.g., occasional undo/redo state mismatches or small memory leaks).
-- Score: 6 (Moderate Functionality Met) -> Basic and Moderate functionalities work well (text ops, navigation, file I/O), but Full functionalities (Undo/Redo) are broken or missing.
-- Score: 4 (Basic Functionality Met) -> Only Basic functionalities work. Moderate features (like deletion, navigation, or file saving) cause critical failures like segmentation faults.
-- Score: 2 (Below Basic) -> Code compiles but crashes almost immediately, or fails to implement even the Basic doubly-linked list correctly.
-- Score: 0 (No Functionality) -> Code fails to compile at all.
+You must evaluate the project and assign a numerical `score` exactly based on the following tiers (10-point intervals out of 100):
+- Score: 100 -> All Basic, Moderate, and Full functionalities work flawlessly (including robust Undo/Redo and memory safety).
+- Score: 90 -> All features work, but there are very minor UI/UX bugs or negligible memory leaks.
+- Score: 80 -> All features work, but there are noticeable bugs (e.g., occasional undo/redo mismatches).
+- Score: 70 -> Basic and Moderate functionalities work perfectly, but Full functionalities (Undo/Redo) are extremely buggy.
+- Score: 60 -> Basic and Moderate functionalities work well, but Full functionalities are completely broken or missing.
+- Score: 50 -> Basic functionalities work perfectly, but Moderate functionalities have frequent bugs.
+- Score: 40 -> Only Basic functionalities work (text ops). Moderate features (navigation, file I/O) cause critical failures.
+- Score: 30 -> Basic functionalities have critical bugs (e.g., segmentation faults on insertion).
+- Score: 20 -> Code compiles but crashes almost immediately or fails to implement the doubly-linked list correctly.
+- Score: 10 -> Code compiles but is functionally empty or missing major structural requirements.
+- Score: 0 -> Code fails to compile at all.
 
 **Output Constraints (CRITICAL):**
 You must return your evaluation STRICTLY in the following JSON format required by the workflow. Do not include any markdown formatting (e.g., no ```json), extra text, or explanations outside of the JSON block. Return ONLY the raw JSON object.
