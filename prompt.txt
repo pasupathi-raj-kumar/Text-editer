@@ -18,12 +18,12 @@ Evaluate the provided code against the functional requirements below, strictly f
   8. Robustness & Memory Safety: Completely safe from memory leaks, buffer overflows on long string inputs, and segmentation faults.
 
 **Grading Rubric and Mark Allocation (CRITICAL):**
-You must evaluate the project and assign a numerical `score` exactly based on the following tiers (20% intervals):
-- Score: 100 (Full Functionality Met) -> All Basic, Moderate, and Full functionalities work flawlessly (including robust Undo/Redo and memory safety).
-- Score: 80 (Almost Full Functionality) -> All features work, but there are minor bugs (e.g., occasional undo/redo state mismatches or small memory leaks).
-- Score: 60 (Moderate Functionality Met) -> Basic and Moderate functionalities work well (text ops, navigation, file I/O), but Full functionalities (Undo/Redo) are broken or missing.
-- Score: 40 (Basic Functionality Met) -> Only Basic functionalities work. Moderate features (like deletion, navigation, or file saving) cause critical failures like segmentation faults.
-- Score: 20 (Below Basic) -> Code compiles but crashes almost immediately, or fails to implement even the Basic doubly-linked list correctly.
+You must evaluate the project and assign a numerical `score` exactly based on the following tiers (2 point intervals out of 10):
+- Score: 10 (Full Functionality Met) -> All Basic, Moderate, and Full functionalities work flawlessly (including robust Undo/Redo and memory safety).
+- Score: 8 (Almost Full Functionality) -> All features work, but there are minor bugs (e.g., occasional undo/redo state mismatches or small memory leaks).
+- Score: 6 (Moderate Functionality Met) -> Basic and Moderate functionalities work well (text ops, navigation, file I/O), but Full functionalities (Undo/Redo) are broken or missing.
+- Score: 4 (Basic Functionality Met) -> Only Basic functionalities work. Moderate features (like deletion, navigation, or file saving) cause critical failures like segmentation faults.
+- Score: 2 (Below Basic) -> Code compiles but crashes almost immediately, or fails to implement even the Basic doubly-linked list correctly.
 - Score: 0 (No Functionality) -> Code fails to compile at all.
 
 **Output Constraints (CRITICAL):**
